@@ -28,7 +28,7 @@ func main() {
 	router := mux.NewRouter()
 	router.Methods("POST").Path("/factoryReset").HandlerFunc(factoryReset)
 
-	err := http.ListenAndServe(fmt.Sprintf("%s:%s", utils.GetEnv("HOST", constants.Host), utils.GetEnv("PORT", constants.Port)), router)
+	err = http.ListenAndServe(fmt.Sprintf("%s:%s", utils.GetEnv("HOST", constants.Host), utils.GetEnv("PORT", constants.Port)), router)
 	if err != nil {
 		log.Fatal("Webserver could not start: ", err)
 	}
