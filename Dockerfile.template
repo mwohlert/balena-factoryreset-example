@@ -9,9 +9,9 @@ COPY ./ ./
 RUN CGO_ENABLED=1 GOARCH=arm GOARM=7 GOOS=linux go build 
 
 # stage 1
-FROM scratch
-WORKDIR /
+FROM balenalib/%%BALENA_ARCH%%-golang:stretch-run
+WORKDIR /app
 COPY --from=builder /build/balena-factoryreset-example .
 
 
-ENTRYPOINT ["/balena-factoryreset-example"]
+ENTRYPOINT ["/app/balena-factoryreset-example"]
