@@ -1,7 +1,7 @@
 package utils
 
 import (
-	"balena-factorreset-example/constants"
+	"balena-factoryreset-example/constants"
 	"bytes"
 	"encoding/json"
 	"net/http"

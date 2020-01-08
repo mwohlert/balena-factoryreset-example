@@ -1,4 +1,4 @@
-module balena-factorreset-example
+module balena-factoryreset-example
 
 go 1.13
 

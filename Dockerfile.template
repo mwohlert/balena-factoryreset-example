@@ -11,7 +11,7 @@ RUN CGO_ENABLED=1 GOARCH=arm GOARM=7 GOOS=linux go build
 # stage 1
 FROM scratch
 WORKDIR /
-COPY --from=builder /build/balena-factorreset-example .
+COPY --from=builder /build/balena-factoryreset-example .
 
 
-ENTRYPOINT ["./balena-factorreset-example"]
+ENTRYPOINT ["/balena-factoryreset-example"]

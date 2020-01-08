@@ -1,11 +1,10 @@
 package utils
 
 import (
+	"balena-factoryreset-example/constants"
 	"errors"
-	"balena-factorreset-example/constants"
 	"os"
 )
-
 
 // GetEnv Get value of environmemnt variable. When empty fallback to defaultValue
 func GetEnv(key, defaultValue string) string {

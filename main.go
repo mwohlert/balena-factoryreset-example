@@ -1,8 +1,8 @@
 package main
 
 import (
-	"balena-factorreset-example/constants"
-	"balena-factorreset-example/utils"
+	"balena-factoryreset-example/constants"
+	"balena-factoryreset-example/utils"
 	"encoding/json"
 	"fmt"
 	"log"
