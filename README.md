@@ -10,7 +10,6 @@ These instructions will get you a copy of the project up and running on your loc
 
  * device connected to the balena cloud
  * wireless connection
- * [balena staged releases](https://github.com/balenalabs/staged-releases) activated
  * Update staged and not applied due to lockfile
 
 
@@ -31,3 +30,4 @@ In order to trigger a factory reset do a post request to the `factoryReset` rout
 ```
 curl -X POST http://deviceIPAdress:8080/factoryReset
 ```
+
