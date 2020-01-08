@@ -14,4 +14,7 @@ const (
 	Port string = "8080"
 	// Host : Host on which the webserver listens
 	Host string = "0.0.0.0"
+
+	// LockfilePath : Path to balena lockfile
+	LockfilePath string = "/tmp/balena/updates.lock"
 )
