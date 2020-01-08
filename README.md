@@ -8,8 +8,10 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
- * balenaOS compatible device running a development balenaOS or a device connected to the balena cloud.
+ * device connected to the balena cloud
  * wireless connection
+ * [balena staged releases](https://github.com/balenalabs/staged-releases) activated
+ * Update staged and not applied due to lockfile
 
 
 ### Installing
@@ -29,5 +31,3 @@ In order to trigger a factory reset do a post request to the `factoryReset` rout
 ```
 curl -X POST http://deviceIPAdress:8080/factoryReset
 ```
-
-dd
