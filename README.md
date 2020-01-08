@@ -21,3 +21,11 @@ balena push x.x.x.x --logs --source .
 ```
 
 If you are using the balena cloud, follow the release instructions.
+
+## Usage
+
+In order to trigger a factory reset do a post request to the `factoryReset` route:
+
+```
+curl -X POST http://deviceIPAdress:8080/factoryReset
+```
