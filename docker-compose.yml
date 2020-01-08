@@ -1,0 +1,14 @@
+version: '2.1'
+networks: {}
+services:
+  balena-factoryreset-example:
+    build:
+      context: .
+    privileged: true
+    restart: always
+    network_mode: host
+    labels:
+      io.resin.features.kernel-modules: '1'
+      io.resin.features.firmware: '1'
+      io.resin.features.dbus: '1'
+      io.resin.features.supervisor-api: '1'

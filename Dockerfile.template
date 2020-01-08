@@ -1,0 +1,10 @@
+FROM balenalib/%%BALENA_ARCH%%-golang:latest-build
+ENV INITSYSTEM on
+
+ENV DBUS_SYSTEM_BUS_ADDRESS /host/run/dbus/system_bus_socket
+
+WORKDIR /build
+COPY ./ ./
+RUN CGO_ENABLED=1 GOARCH=arm GOARM=7 GOOS=linux go build 
+
+ENTRYPOINT ["./balena-factorreset-example"]
