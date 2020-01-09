@@ -5,6 +5,7 @@ import (
 	"balena-factoryreset-example/utils"
 	"encoding/json"
 	"fmt"
+	"io/ioutil"
 	"log"
 	"net/http"
 	"os"
@@ -14,6 +15,12 @@ import (
 )
 
 func main() {
+	log.Println("TESTf1!")
+	err := ioutil.WriteFile("/data/testFile", []byte("Hello World"), 0644)
+	if err != nil {
+		log.Println("Error writing testfile")
+	}
+
 	lock, err := lockfile.New(constants.LockfilePath)
 	if err != nil {
 		log.Println("Could not create lockfile")

@@ -1,5 +1,8 @@
 version: '2.1'
 networks: {}
+volumes:
+  testVolume: {}
+
 services:
   balena-factoryreset-example:
     build:
@@ -7,6 +10,8 @@ services:
     privileged: true
     restart: always
     network_mode: host
+    volumes:
+      - 'testVolume:/data'
     labels:
       io.balena.features.kernel-modules: '1'
       io.balena.features.firmware: '1'

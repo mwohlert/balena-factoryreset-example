@@ -30,4 +30,3 @@ In order to trigger a factory reset do a post request to the `factoryReset` rout
 ```
 curl -X POST http://deviceIPAdress:8080/factoryReset
 ```
-
