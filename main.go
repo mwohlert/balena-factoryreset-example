@@ -13,7 +13,7 @@ import (
 )
 
 func main() {
-	log.Println("TESTf1!ddfd")
+	log.Println("TESTf1!ddfcd")
 	err := ioutil.WriteFile("/data/testFile", []byte("Hello World"), 0644)
 	if err != nil {
 		log.Println("Error writing testfile")
