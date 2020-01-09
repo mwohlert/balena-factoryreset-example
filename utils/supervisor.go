@@ -26,7 +26,7 @@ func PurgeData() error {
 		return err
 	}
 
-	purgeRequest := ForceRequest{Force: true}
+	purgeRequest := ForceRequest{Force: false}
 
 	jsonBody, err := json.Marshal(purgeRequest)
 	if err != nil {
