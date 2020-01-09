@@ -12,6 +12,9 @@ FROM balenalib/%%BALENA_ARCH%%:stretch-run
 WORKDIR /app
 COPY --from=builder /build/balena-factoryreset-example .
 
+RUN install_packages util-linux
+
 ENV DBUS_SYSTEM_BUS_ADDRESS /host/run/dbus/system_bus_socket
 
-ENTRYPOINT ["/app/balena-factoryreset-example"]
+
+ENTRYPOINT ["/usr/bin/flock", "-x", "-n", "/tmp/balena/updates.lock", "-c", "'/app/balena-factoryreset-example'" ]

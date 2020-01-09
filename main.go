@@ -8,10 +8,8 @@ import (
 	"io/ioutil"
 	"log"
 	"net/http"
-	"os"
 
 	"github.com/gorilla/mux"
-	"github.com/nightlyone/lockfile"
 )
 
 func main() {
@@ -19,17 +17,6 @@ func main() {
 	err := ioutil.WriteFile("/data/testFile", []byte("Hello World"), 0644)
 	if err != nil {
 		log.Println("Error writing testfile")
-	}
-
-	lock, err := lockfile.New(constants.LockfilePath)
-	if err != nil {
-		log.Println("Could not create lockfile")
-		os.Exit(1)
-	}
-	err = lock.TryLock()
-	if err != nil {
-		log.Println("Could not lock to lockfile")
-		os.Exit(1)
 	}
 
 	router := mux.NewRouter()
