@@ -15,7 +15,7 @@ import (
 )
 
 func main() {
-	log.Println("TESTf1!df")
+	log.Println("TESTf1!ddf")
 	err := ioutil.WriteFile("/data/testFile", []byte("Hello World"), 0644)
 	if err != nil {
 		log.Println("Error writing testfile")
