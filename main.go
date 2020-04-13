@@ -9,12 +9,15 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"time"
 
 	"github.com/gorilla/mux"
 	"github.com/nightlyone/lockfile"
 )
 
 func main() {
+	time.Sleep(10 * time.Second)
+
 	lock, err := lockfile.New(constants.LockfilePath)
 	if err != nil {
 		log.Println("Could not create lockfile")
