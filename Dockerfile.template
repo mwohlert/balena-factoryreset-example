@@ -5,7 +5,7 @@ ENV INITSYSTEM on
 
 WORKDIR /build
 COPY ./ ./
-RUN CGO_ENABLED=1 GOARCH=arm GOARM=5 GOOS=linux go build 
+RUN CGO_ENABLED=1 GOOS=linux go build 
 
 # stage 1
 FROM balenalib/%%BALENA_ARCH%%:stretch-run
