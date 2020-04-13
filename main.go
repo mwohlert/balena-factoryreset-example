@@ -26,7 +26,7 @@ func main() {
 		os.Exit(1)
 	}
 
-	log.Println("TEdST2d2")
+	log.Println("TEdST23d2")
 	err = ioutil.WriteFile("/data/testFile", []byte("Hello World"), 0644)
 	if err != nil {
 		log.Println("Error writing testfile")
