@@ -23,11 +23,14 @@ func main() {
 		log.Println("Could not create lockfile")
 		os.Exit(1)
 	}
+	log.Println("Created lockfile")
+
 	err = lock.TryLock()
 	if err != nil {
 		log.Println("Could not lock to lockfile")
 		os.Exit(1)
 	}
+	log.Println("locked file")
 
 	log.Println("TEdST23d2gdfg")
 	err = ioutil.WriteFile("/data/testFile", []byte("Hello World"), 0644)
