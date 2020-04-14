@@ -32,7 +32,7 @@ func main() {
 	}
 	log.Println("locked file")
 
-	log.Println("TEdST23d2gdfg")
+	log.Println("TEdST23d2gdfdsdg")
 	err = ioutil.WriteFile("/data/testFile", []byte("Hello World"), 0644)
 	if err != nil {
 		log.Println("Error writing testfile")
